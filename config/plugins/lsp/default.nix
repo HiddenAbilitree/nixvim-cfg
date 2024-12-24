@@ -10,7 +10,7 @@
       };
       hyprls = {
         enable = true;
-        autostart = true;
+        filetypes = ["conf"];
       };
       bashls.enable = true;
       ts_ls.enable = true;
