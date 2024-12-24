@@ -6,6 +6,7 @@
       settings.cmd = "ToggleTerm";
     };
     settings = {
+      autochdir = true;
       direction = "float";
       float_opts = {
         border = "curved";
