@@ -9,6 +9,7 @@
     ./mini
     ./oil
     ./telescope
+    ./toggleterm
     ./treesitter
     ./vimtex
     ./supermaven
