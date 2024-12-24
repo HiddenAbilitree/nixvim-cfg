@@ -1,6 +1,7 @@
 {
   imports = [
     ./cmp
+    ./lazygit
     ./lsp
     ./luasnip
     ./none-ls

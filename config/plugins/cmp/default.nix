@@ -1,6 +1,8 @@
 {
   plugins.cmp = {
     enable = true;
+
+    lazyLoad = true;
     autoEnableSources = true;
     settings = {
       mapping = {
