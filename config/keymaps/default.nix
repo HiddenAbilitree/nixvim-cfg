@@ -78,5 +78,9 @@
       key = "\\";
       action = "<cmd>Oil<Cr>";
     }
+    {
+      key = "<leader>lg";
+      action = "<cmd>LazyGit<cr>";
+    }
   ];
 }
