@@ -8,7 +8,10 @@
         enable = true;
         settings.formatting.command = ["alejandra"];
       };
-      hyprls.enable = true;
+      hyprls = {
+        enable = true;
+        autostart = true;
+      };
       bashls.enable = true;
       ts_ls.enable = true;
       tailwindcss.enable = true;

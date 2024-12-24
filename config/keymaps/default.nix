@@ -86,19 +86,19 @@
     # telescope.nvim
     {
       key = "<leader>ff";
-      action = "find_files";
+      action = "<cmd>Telescope find_files<cr>";
     }
     {
       key = "<leader>fg";
-      action = "live_grep";
+      action = "<cmd>Telescope live_grep<cr>";
     }
     {
       key = "<leader>fc";
-      action = "buffers";
+      action = "<cmd>Telescope buffers<cr>";
     }
     {
       key = "<leader>fd";
-      action = "lsp_workspace_symbols";
+      action = "<cmd>Telescope lsp_workspace_symbols<cr>";
     }
 
     # toggleterm.nvim
