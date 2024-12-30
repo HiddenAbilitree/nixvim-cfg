@@ -9,4 +9,6 @@
   viAlias = true;
   vimAlias = true;
   globals.mapleader = " ";
+
+  clipboard.providers.wl-copy.enable = true;
 }
