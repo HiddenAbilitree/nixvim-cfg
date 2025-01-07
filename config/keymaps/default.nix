@@ -21,7 +21,11 @@
       action = "<C-u>";
       options.noremap = true;
     }
-
+    {
+      key = "'<,'>w";
+      action = "<cmd>wl-copy<cr>";
+      options.noremap = true;
+    }
     # unbind arrow keys
     {
       key = "<Up>";
