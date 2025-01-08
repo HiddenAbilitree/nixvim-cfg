@@ -13,7 +13,7 @@
         autostart = true;
         filetypes = ["conf"];
       };
-
+      eslint.enable = true;
       jsonls.enable = true;
       cssls.enable = true;
       bashls.enable = true;
