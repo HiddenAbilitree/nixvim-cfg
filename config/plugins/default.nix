@@ -3,7 +3,6 @@
     ./cmp
     ./lazygit
     ./lsp
-    ./lz-n
     ./luasnip
     ./none-ls
     ./mini

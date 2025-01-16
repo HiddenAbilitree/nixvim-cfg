@@ -1,7 +1,6 @@
 {
   colorschemes.tokyonight = {
     enable = true;
-    lazyLoad.enable = true;
     settings = {
       styles = {
         floats = "transparent";
