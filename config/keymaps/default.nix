@@ -2,6 +2,11 @@
   keymaps = [
     # general mappings
     {
+      key = "?";
+      action = "<cmd>lua vim.lsp.buf.hover()<cr>";
+      options.noremap = true;
+    }
+    {
       key = "<C-j>";
       action = "b";
       options.noremap = true;

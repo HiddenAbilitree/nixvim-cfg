@@ -14,36 +14,22 @@
     ./supermaven
   ];
   plugins = {
-    cmp-latex-symbols = {
-      enable = true;
-    };
+    cmp-latex-symbols.enable = true;
 
-    web-devicons = {
-      enable = true;
-    };
+    web-devicons.enable = true;
 
-    lsp-format = {
-      enable = true;
-    };
+    lsp-format.enable = true;
 
-    ts-autotag = {
-      enable = true;
-    };
+    tailwind-tools.enable = true;
 
-    ts-comments = {
-      enable = true;
-    };
+    ts-autotag.enable = true;
 
-    treesitter-context = {
-      enable = true;
-    };
+    ts-comments.enable = true;
 
-    vim-css-color = {
-      enable = true;
-    };
+    treesitter-context.enable = true;
 
-    project-nvim = {
-      enable = true;
-    };
+    vim-css-color.enable = true;
+
+    project-nvim.enable = true;
   };
 }
