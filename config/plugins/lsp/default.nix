@@ -1,6 +1,9 @@
 {
   plugins.lsp = {
     enable = true;
+
+    luaConfig.post = builtins.readFile ./lsp.lua;
+
     servers = {
       clangd.enable = true;
       ltex.enable = true;
