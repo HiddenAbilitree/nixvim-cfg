@@ -6,6 +6,8 @@
     ./luasnip
     ./none-ls
     ./mini
+    ./noice
+    ./nui
     ./oil
     ./telescope
     ./toggleterm
