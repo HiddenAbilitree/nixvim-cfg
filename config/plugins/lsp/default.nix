@@ -24,9 +24,11 @@
       ts_ls.enable = true;
       tailwindcss = {
         enable = true;
-        rootDir = ''
-          function() return require("lspconfig").util.root_pattern("package.json") end
-        '';
+        rootDir =
+          # lua
+          ''
+            require("lspconfig.util").root_pattern("package.json")
+          '';
       };
 
       rust_analyzer = {
