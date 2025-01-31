@@ -5,6 +5,7 @@
     luaConfig.post = builtins.readFile ./lsp.lua;
 
     servers = {
+      astro.enable = true;
       clangd.enable = true;
       ltex.enable = true;
       nixd = {
