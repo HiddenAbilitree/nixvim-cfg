@@ -22,7 +22,12 @@
       cssls.enable = true;
       bashls.enable = true;
       ts_ls.enable = true;
-      tailwindcss.enable = true;
+      tailwindcss = {
+        enable = true;
+        rootDir = ''
+          function() return require("lspconfig").util.root_pattern("package.json") end
+        '';
+      };
 
       rust_analyzer = {
         enable = true;
