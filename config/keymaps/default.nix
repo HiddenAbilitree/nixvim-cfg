@@ -83,13 +83,8 @@
     # oil.nvim
     {
       key = "\'";
-      action = "\\";
-      options.remap = true;
-    }
-
-    {
-      key = "\\";
       action = "<cmd>Oil<Cr>";
+      options.noremap = true;
     }
 
     # lazygit.nvim
