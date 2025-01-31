@@ -14,7 +14,6 @@
       };
       hyprls = {
         enable = true;
-        autostart = true;
         filetypes = ["conf"];
       };
       eslint.enable = true;

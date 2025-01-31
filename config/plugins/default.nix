@@ -1,12 +1,13 @@
 {
   imports = [
     ./cmp
+    ./image
     ./lazygit
     ./lsp
     ./luasnip
-    ./none-ls
     ./mini
     ./noice
+    ./none-ls
     ./nui
     ./oil
     ./telescope
