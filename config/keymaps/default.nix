@@ -83,6 +83,12 @@
     # oil.nvim
     {
       key = "\'";
+      action = "\\";
+      options.remap = true;
+    }
+
+    {
+      key = "\\";
       action = "<cmd>Oil<Cr>";
     }
 
