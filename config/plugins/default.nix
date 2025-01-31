@@ -33,6 +33,8 @@
 
     vim-css-color.enable = true;
 
+    which-key.enable = true;
+
     project-nvim.enable = true;
   };
 }
