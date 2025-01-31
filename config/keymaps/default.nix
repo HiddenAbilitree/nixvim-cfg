@@ -84,7 +84,10 @@
     {
       key = "\'";
       action = "<cmd>Oil<Cr>";
-      options.noremap = true;
+      options = {
+        noremap = true;
+        nowait = true;
+      };
     }
 
     # lazygit.nvim
