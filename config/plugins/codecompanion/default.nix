@@ -1,4 +1,4 @@
-{config, ...}: {
+{sops, ...}: {
   plugins.codecompanion = {
     enable = true;
     settings = {
@@ -17,7 +17,7 @@
                 },
               },
               env = {
-                api_key = "cmd:echo ${config.sops.secrets.gemini-api-key.path}",
+                api_key = "cmd:echo ${sops.secrets.gemini-api-key.path}",
               },
             })
           '';

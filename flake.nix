@@ -5,11 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    private.url = "git+ssh://git@github.com/HiddenAbilitree/private-nixos-cfg.git?ref=main";
   };
 
   outputs = {
     nixvim,
     flake-parts,
+    private,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -30,6 +32,9 @@
         nixvimModule = {
           inherit pkgs;
           module = import ./config;
+          extraSpecialArgs = {
+            inherit (private) nixosModules;
+          };
         };
         nvim = systemNixvim.makeNixvimWithModule nixvimModule;
       in {
