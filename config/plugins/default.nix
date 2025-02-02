@@ -1,6 +1,7 @@
 {
   imports = [
     ./cmp
+    ./codecompanion
     ./image
     ./lazygit
     ./lsp
@@ -14,7 +15,6 @@
     ./toggleterm
     ./treesitter
     ./vimtex
-    ./supermaven
   ];
   plugins = {
     cmp-latex-symbols.enable = true;
