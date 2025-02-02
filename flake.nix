@@ -11,7 +11,6 @@
   outputs = {
     nixvim,
     flake-parts,
-    private,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -32,9 +31,7 @@
         nixvimModule = {
           inherit pkgs;
           module = import ./config;
-          extraSpecialArgs = {
-            inherit (private) nixosModules;
-          };
+          extraSpecialArgs = inputs;
         };
         nvim = systemNixvim.makeNixvimWithModule nixvimModule;
       in {
