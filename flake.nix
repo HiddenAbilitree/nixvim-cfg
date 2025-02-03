@@ -11,6 +11,7 @@
   outputs = {
     nixvim,
     flake-parts,
+    private,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -31,8 +32,9 @@
         nixvimModule = {
           inherit pkgs;
           module = import ./config;
-
-          modules = [inputs.private.nixosModules];
+          extraSpecialArgs = {
+            gemini-api-key = private.nixosModules.sops.secrets.gemini-api-key.path;
+          };
         };
         nvim = systemNixvim.makeNixvimWithModule nixvimModule;
       in {
