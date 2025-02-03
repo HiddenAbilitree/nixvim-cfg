@@ -8,8 +8,6 @@
     ./luasnip
     ./mini
     ./noice
-    ./none-ls
-    ./nui
     ./oil
     ./telescope
     ./toggleterm
@@ -17,8 +15,6 @@
     ./vimtex
   ];
   plugins = {
-    cmp-latex-symbols.enable = true;
-
     web-devicons.enable = true;
 
     lsp-format.enable = true;

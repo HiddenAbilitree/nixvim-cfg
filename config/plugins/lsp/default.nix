@@ -21,14 +21,7 @@
       cssls.enable = true;
       bashls.enable = true;
       ts_ls.enable = true;
-      tailwindcss = {
-        enable = true;
-        rootDir =
-          # lua
-          ''
-            require("lspconfig.util").root_pattern("package.json")
-          '';
-      };
+      tailwindcss.enable = true;
 
       rust_analyzer = {
         enable = true;
