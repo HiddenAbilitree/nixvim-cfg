@@ -31,9 +31,8 @@
         nixvimModule = {
           inherit pkgs;
           module = import ./config;
-          extraSpecialArgs = {
-            gemini-api-key = inputs.private.nixosModules.sops.secrets.gemini-api-key.path;
-          };
+
+          modules = [inputs.private.nixosModules];
         };
         nvim = systemNixvim.makeNixvimWithModule nixvimModule;
       in {
