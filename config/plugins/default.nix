@@ -1,7 +1,6 @@
 {
   imports = [
     ./cmp
-    ./codecompanion
     ./image
     ./lazygit
     ./lsp
@@ -19,7 +18,10 @@
 
     lsp-format.enable = true;
 
-    tailwind-tools.enable = true;
+    tailwind-tools = {
+      enable = true;
+      settings.server.override = false;
+    };
 
     ts-autotag.enable = true;
 

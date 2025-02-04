@@ -7,23 +7,23 @@
       options.noremap = true;
     }
     {
-      key = "<C-j>";
+      key = "<C-h>";
       action = "b";
       options.noremap = true;
     }
     {
-      key = "<C-;>";
+      key = "<C-l>";
       action = "w";
       options.noremap = true;
     }
     {
-      key = "<S-k>";
-      action = "<C-d>";
+      key = "<C-k>";
+      action = "<C-u>";
       options.noremap = true;
     }
     {
-      key = "<S-l>";
-      action = "<C-u>";
+      key = "<C-j>";
+      action = "<C-d>";
       options.noremap = true;
     }
     {
@@ -84,9 +84,25 @@
       action = ":";
       options.noremap = true;
     }
+    {
+      key = "<leader>h";
+      action = ":";
+      options = {
+        noremap = true;
+        nowait = true;
+      };
+    }
     # oil.nvim
     {
       key = "\'";
+      action = "<cmd>Oil<Cr>";
+      options = {
+        noremap = true;
+        nowait = true;
+      };
+    }
+    {
+      key = "b";
       action = "<cmd>Oil<Cr>";
       options = {
         noremap = true;
