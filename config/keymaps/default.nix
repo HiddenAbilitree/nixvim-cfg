@@ -54,32 +54,36 @@
     }
 
     # true bis bindings
+    # {
+    #   key = "h";
+    #   action = ":";
+    #   options.noremap = true;
+    # }
+    # {
+    #   key = "j";
+    #   action = "h";
+    #   options.noremap = true;
+    # }
+    # {
+    #   key = "k";
+    #   action = "j";
+    #   options.noremap = true;
+    # }
+    # {
+    #   key = "l";
+    #   action = "k";
+    #   options.noremap = true;
+    # }
+    # {
+    #   key = ";";
+    #   action = "l";
+    #   options.noremap = true;
+    # }
     {
-      key = "h";
+      key = ";";
       action = ":";
       options.noremap = true;
     }
-    {
-      key = "j";
-      action = "h";
-      options.noremap = true;
-    }
-    {
-      key = "k";
-      action = "j";
-      options.noremap = true;
-    }
-    {
-      key = "l";
-      action = "k";
-      options.noremap = true;
-    }
-    {
-      key = ";";
-      action = "l";
-      options.noremap = true;
-    }
-
     # oil.nvim
     {
       key = "\'";
