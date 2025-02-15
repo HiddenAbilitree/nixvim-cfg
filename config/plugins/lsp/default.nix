@@ -105,7 +105,7 @@
         installRustc = false;
         installCargo = false;
       };
-      pyright.enable = true;
+      ruff.enable = true;
       lua_ls.enable = true;
     };
   };
