@@ -21,7 +21,7 @@
         };
       };
     };
-    cmp-ai.enable = true;
+    # cmp-ai.enable = true;
     cmp-latex-symbols.enable = true;
   };
 }
