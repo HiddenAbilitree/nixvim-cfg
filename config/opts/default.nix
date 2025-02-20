@@ -3,7 +3,6 @@
     backspace.__raw = ''
       vim.list_extend(vim.opt.backspace:get(), { "nostop" })
     '';
-
     cmdheight = 0;
     completeopt = [
       "menu"
