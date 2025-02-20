@@ -54,31 +54,6 @@
     }
 
     # true bis bindings
-    # {
-    #   key = "h";
-    #   action = ":";
-    #   options.noremap = true;
-    # }
-    # {
-    #   key = "j";
-    #   action = "h";
-    #   options.noremap = true;
-    # }
-    # {
-    #   key = "k";
-    #   action = "j";
-    #   options.noremap = true;
-    # }
-    # {
-    #   key = "l";
-    #   action = "k";
-    #   options.noremap = true;
-    # }
-    # {
-    #   key = ";";
-    #   action = "l";
-    #   options.noremap = true;
-    # }
     {
       key = ";";
       action = ":";
@@ -138,50 +113,6 @@
     {
       key = "<leader>t";
       action = "<cmd>ToggleTerm<cr>";
-    }
-
-    # cmp.nvim
-    {
-      key = "<C-b>";
-      action = "cmp.mapping.scroll_docs(-4)";
-    }
-    {
-      key = "<C-f>";
-      action = "cmp.mapping.scroll_docs(4)";
-    }
-    {
-      key = "<C-Space>";
-      action = "cmp.mapping.complete()";
-    }
-    {
-      key = "<C-e>";
-      action = "cmp.mapping.abort()";
-    }
-    {
-      key = "<CR>";
-      action = "cmp.mapping.confirm({ select = true })";
-    }
-
-    # cmp.nvim/supermaven.nvim
-    {
-      key = "<Tab>";
-      action = ''
-        function(fallback)
-          local luasnip = require('luasnip')
-          local supermaven = require('supermaven-nvim.completion_preview')
-          if supermaven.has_suggestion() then
-            supermaven.on_accept_suggestion()
-          elseif cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expandable() then
-            luasnip.expand()
-          elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
-          else
-            fallback()
-          end
-        end
-      '';
     }
   ];
 }
