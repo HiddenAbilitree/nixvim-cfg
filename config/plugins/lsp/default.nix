@@ -10,7 +10,7 @@
     servers = {
       astro.enable = true;
       clangd.enable = true;
-      ltex.enable = true;
+      # ltex.enable = true;
       nixd = {
         enable = true;
         settings.formatting.command = ["alejandra"];
