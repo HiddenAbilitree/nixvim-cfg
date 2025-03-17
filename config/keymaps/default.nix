@@ -7,6 +7,11 @@
       options.noremap = true;
     }
     {
+      key = "<leader>lr";
+      action = "<cmd> lua vim.lsp.buf.rename()<cr>";
+      options.noremap = true;
+    }
+    {
       key = "<C-h>";
       action = "b";
       options.noremap = true;
