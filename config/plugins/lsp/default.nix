@@ -19,7 +19,6 @@
       jsonls.enable = true;
       cssls.enable = true;
       bashls.enable = true;
-      sqls.enable = true;
       ts_ls.enable = true;
       tailwindcss.enable = true;
 
