@@ -4,7 +4,6 @@
     ./image
     ./lazygit
     ./lsp
-    ./luasnip
     ./mini
     ./noice
     ./oil

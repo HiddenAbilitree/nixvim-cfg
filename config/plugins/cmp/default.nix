@@ -8,7 +8,6 @@
           {name = "path";}
           {name = "buffer";}
           {name = "treesitter";}
-          {name = "luasnip";}
         ];
         mapping = {
           "<C-Space>" = "cmp.mapping.complete()";
