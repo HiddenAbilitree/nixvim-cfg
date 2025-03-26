@@ -19,9 +19,9 @@
       jsonls.enable = true;
       cssls.enable = true;
       bashls.enable = true;
-      ts_ls.enable = true;
       tailwindcss.enable = true;
-
+      tinymist.enable = true;
+      ts_ls.enable = true;
       rust_analyzer = {
         enable = true;
         # package = pkgs.rust-analyzer;
