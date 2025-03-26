@@ -29,6 +29,8 @@
 
     treesitter-context.enable = true;
 
+    typst-preview.enable = true;
+
     vim-css-color.enable = true;
 
     which-key.enable = true;
