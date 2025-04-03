@@ -29,7 +29,13 @@
         installRustc = false;
         installCargo = false;
       };
-      ruff.enable = true;
+      pylsp = {
+        enable = true;
+        settings.plugins = {
+          ruff.enabled = true;
+          pylint.enabled = true;
+        };
+      };
       lua_ls.enable = true;
     };
   };
