@@ -38,7 +38,7 @@
     linebreak = true;
     list = true;
     listchars = "tab:‒▶,trail:·,multispace:·,lead: ,nbsp:⎕";
-    mouse = "a";
+    mouse = "";
     number = true;
     preserveindent = true;
     pumheight = 10;
