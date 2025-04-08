@@ -2,8 +2,13 @@
   keymaps = [
     # general mappings
     {
-      key = "?";
+      key = "K";
       action = "<cmd>lua vim.lsp.buf.hover()<cr>";
+      options.noremap = true;
+    }
+    {
+      key = "<leader>cd";
+      action = "<cmd>lua vim.diagnostic.open_float()<cr>";
       options.noremap = true;
     }
     {
