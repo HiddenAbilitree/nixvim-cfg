@@ -13,8 +13,6 @@
     ./vimtex
   ];
   plugins = {
-    java.enable = true;
-
     lsp-format.enable = true;
 
     project-nvim.enable = true;

@@ -5,29 +5,21 @@
 
     servers = {
       astro.enable = true;
+      bashls.enable = true;
       clangd.enable = true;
-      # ltex.enable = true;
-      nixd = {
-        enable = true;
-        settings.formatting.command = ["alejandra"];
-      };
+      cssls.enable = true;
+      eslint.enable = true;
       hyprls = {
         enable = true;
         filetypes = ["conf"];
       };
-      eslint.enable = true;
+      jdtls.enable = true;
       jsonls.enable = true;
-      cssls.enable = true;
-      bashls.enable = true;
-      tailwindcss.enable = true;
-      tinymist.enable = true;
-      ts_ls.enable = true;
-      rust_analyzer = {
+      # ltex.enable = true;
+      lua_ls.enable = true;
+      nixd = {
         enable = true;
-        # package = pkgs.rust-analyzer;
-        settings.check.command = "clippy";
-        installRustc = false;
-        installCargo = false;
+        settings.formatting.command = ["alejandra"];
       };
       pylsp = {
         enable = true;
@@ -36,7 +28,16 @@
           pylint.enabled = true;
         };
       };
-      lua_ls.enable = true;
+      rust_analyzer = {
+        enable = true;
+        # package = pkgs.rust-analyzer;
+        settings.check.command = "clippy";
+        installRustc = false;
+        installCargo = false;
+      };
+      tailwindcss.enable = true;
+      tinymist.enable = true;
+      ts_ls.enable = true;
     };
   };
 }
