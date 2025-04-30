@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       styles = {
-        floats = "transparent";
-        sidebars = "transparent";
+        # floats = "transparent";
+        # sidebars = "transparent";
         comments = {
           italic = true;
         };

@@ -22,6 +22,11 @@
       settings.server.override = false;
     };
 
+    transparent = {
+      enable = true;
+      autoLoad = true;
+    };
+
     treesitter-context.enable = true;
 
     ts-autotag.enable = true;

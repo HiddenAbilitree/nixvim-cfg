@@ -14,7 +14,7 @@
     breakindent = true;
     copyindent = true;
     shiftwidth = 2;
-    showtabline = 2;
+    showtabline = 1;
     softtabstop = 2;
     tabstop = 2;
 
