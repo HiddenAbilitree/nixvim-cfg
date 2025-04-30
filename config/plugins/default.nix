@@ -25,6 +25,29 @@
     transparent = {
       enable = true;
       autoLoad = true;
+      settings.extra_groups = [
+        "NormalFloat"
+        "BufferLineTabClose"
+        "BufferlineBufferSelected"
+        "BufferLineFill"
+        "BufferLineBackground"
+        "BufferLineSeparator"
+        "BufferLineIndicatorSelected"
+
+        "IndentBlanklineChar"
+
+        "LspFloatWinNormal"
+        "Normal"
+        "NormalFloat"
+        "FloatBorder"
+        "TelescopeNormal"
+        "TelescopeBorder"
+        "TelescopePromptBorder"
+        "TelescopePromptTitle"
+        "SagaBorder"
+        "SagaNormal"
+        "WhichKeyNormal"
+      ];
     };
 
     treesitter-context.enable = true;

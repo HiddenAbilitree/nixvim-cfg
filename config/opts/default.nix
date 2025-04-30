@@ -18,14 +18,12 @@
     softtabstop = 2;
     tabstop = 2;
 
-    cursorline = true;
+    cursorline = false;
     diffopt.__raw = ''
       vim.list_extend(vim.opt.diffopt:get(), { "algorithm:histogram", "linematch:60" })
     '';
     expandtab = true;
-    fillchars = {
-      eob = " ";
-    };
+    fillchars.eob = " ";
     foldcolumn = "1";
     foldenable = true;
     foldlevel = 99;
