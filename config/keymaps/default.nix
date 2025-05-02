@@ -62,6 +62,12 @@
       action = "<Nop>";
       options.noremap = true;
     }
+    # this join bind is so bad
+    {
+      key = "J";
+      action = "<Nop>";
+      options.noremap = true;
+    }
 
     # true bis bindings
     {
