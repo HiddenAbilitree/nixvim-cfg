@@ -15,6 +15,8 @@
   plugins = {
     lsp-format.enable = true;
 
+    nvim-surround.enable = true;
+
     project-nvim.enable = true;
 
     tailwind-tools = {
