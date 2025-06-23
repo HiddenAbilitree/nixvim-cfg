@@ -28,13 +28,12 @@
           pylint.enabled = true;
         };
       };
-      # rust_analyzer = {
-      #   enable = true;
-      #   # package = pkgs.rust-analyzer;
-      #   settings.check.command = "clippy";
-      #   installRustc = false;
-      #   installCargo = false;
-      # };
+      rust_analyzer = {
+        enable = true;
+        settings.check.command = "clippy";
+        installRustc = false;
+        installCargo = false;
+      };
       tailwindcss.enable = true;
       tinymist.enable = true;
       ts_ls.enable = true;
