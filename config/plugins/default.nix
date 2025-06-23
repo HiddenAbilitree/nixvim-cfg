@@ -13,7 +13,20 @@
     ./vimtex
   ];
   plugins = {
-    lsp-format.enable = true;
+    lsp-format = {
+      enable = true;
+      lspServersToEnable = [
+        "nixd"
+        "lua_ls"
+        "clangd"
+        "eslint"
+        "tailwindcss"
+        "tinymist"
+        "hyprls"
+        "jdtls"
+        "rust-analyzer"
+      ];
+    };
 
     nvim-surround.enable = true;
 
