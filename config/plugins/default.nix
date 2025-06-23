@@ -24,13 +24,15 @@
         "tinymist"
         "hyprls"
         "jdtls"
-        "rust-analyzer"
+        "rust_analyzer"
       ];
     };
 
     nvim-surround.enable = true;
 
     project-nvim.enable = true;
+
+    rustaceanvim.enable = true;
 
     tailwind-tools = {
       enable = true;
