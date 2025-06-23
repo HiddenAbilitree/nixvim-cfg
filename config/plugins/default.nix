@@ -19,6 +19,8 @@
 
     project-nvim.enable = true;
 
+    rustaceanvim.enable = true;
+
     tailwind-tools = {
       enable = true;
       settings.server.override = false;
