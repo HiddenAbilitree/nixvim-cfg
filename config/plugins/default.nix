@@ -32,7 +32,7 @@
 
     project-nvim.enable = true;
 
-    rustaceanvim.enable = true;
+    # rustaceanvim.enable = true;
 
     tailwind-tools = {
       enable = true;
