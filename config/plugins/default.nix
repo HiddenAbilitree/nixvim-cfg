@@ -25,6 +25,7 @@
         "hyprls"
         "jdtls"
         "rust_analyzer"
+        "cssls"
       ];
     };
 
