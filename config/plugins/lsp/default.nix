@@ -21,6 +21,7 @@
         enable = true;
         settings.formatting.command = ["alejandra"];
       };
+      oxlint.enable = true;
       pylsp = {
         enable = true;
         settings.plugins = {
