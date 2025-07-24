@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   plugins.lsp = {
     enable = true;
     luaConfig.post = builtins.readFile ./lsp.lua;
@@ -8,7 +8,10 @@
       bashls.enable = true;
       clangd.enable = true;
       cssls.enable = true;
-      eslint.enable = true;
+      eslint = {
+        enable = true;
+        package = pkgs.eslint_d;
+      };
       hyprls = {
         enable = true;
         filetypes = ["conf"];
