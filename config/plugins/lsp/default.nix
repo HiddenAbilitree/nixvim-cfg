@@ -7,7 +7,15 @@
       astro.enable = true;
       bashls.enable = true;
       clangd.enable = true;
-      cssls.enable = true;
+      cssls = {
+        enable = true;
+        settings = {
+          css = {
+            validate = true;
+            lint.unknownAtRules = "ignore";
+          };
+        };
+      };
       eslint = {
         enable = true;
         package = pkgs.eslint_d;
