@@ -47,6 +47,7 @@
         installCargo = false;
       };
       tailwindcss.enable = true;
+      taplo.enable = true;
       tinymist.enable = true;
       ts_ls.enable = true;
     };
