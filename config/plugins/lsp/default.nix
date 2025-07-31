@@ -32,6 +32,7 @@
         enable = true;
         settings.formatting.command = ["alejandra"];
       };
+      nushell.enable = true;
       oxlint.enable = true;
       pylsp = {
         enable = true;

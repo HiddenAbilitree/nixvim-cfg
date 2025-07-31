@@ -25,7 +25,9 @@
         "hyprls"
         "jdtls"
         "rust_analyzer"
+        "oxlint"
         "cssls"
+        "nushell"
       ];
     };
 
