@@ -16,10 +16,7 @@
           };
         };
       };
-      eslint = {
-        enable = true;
-        package = pkgs.eslint_d;
-      };
+      eslint.enable = true;
       hyprls = {
         enable = true;
         filetypes = ["conf"];
