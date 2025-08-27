@@ -17,6 +17,7 @@
         };
       };
       eslint.enable = true;
+      gopls.enable = true;
       hyprls = {
         enable = true;
         filetypes = ["conf"];
