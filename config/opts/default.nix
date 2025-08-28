@@ -35,7 +35,8 @@
     laststatus = 3;
     linebreak = true;
     list = true;
-    listchars = "tab:‒▶,trail:·,multispace:·,lead: ,nbsp:⎕";
+    # listchars = "tab:‒▶,trail:·,multispace:·,lead: ,nbsp:⎕";
+    listchars = "tab:  ,trail:·,multispace:·,lead: ,nbsp:⎕";
     mouse = "";
     number = true;
     preserveindent = true;
