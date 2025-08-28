@@ -31,6 +31,7 @@
         "lua_ls"
         "clangd"
         "eslint"
+        "gopls"
         "tailwindcss"
         "tinymist"
         "hyprls"
