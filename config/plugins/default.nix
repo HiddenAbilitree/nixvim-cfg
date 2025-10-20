@@ -40,6 +40,9 @@
         "oxlint"
         "cssls"
         "nushell"
+        "pylsp"
+        "pyright"
+        "ruff"
       ];
     };
 

@@ -35,10 +35,13 @@
       pylsp = {
         enable = true;
         settings.plugins = {
+          black.enabled = true;
           ruff.enabled = true;
           pylint.enabled = true;
         };
       };
+      pyright.enable = true;
+      ruff.enable = true;
       rust_analyzer = {
         enable = true;
         settings.check.command = "clippy";
