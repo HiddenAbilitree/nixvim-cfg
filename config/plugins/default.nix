@@ -47,16 +47,18 @@
       ];
     };
 
+    colorizer.enable = true;
+
     nvim-surround.enable = true;
 
     project-nvim.enable = true;
 
     # rustaceanvim.enable = true;
 
-    tailwind-tools = {
-      enable = true;
-      settings.server.override = false;
-    };
+    # tailwind-tools = {
+    #   enable = true;
+    #   settings.server.override = false;
+    # };
 
     transparent = {
       enable = true;
