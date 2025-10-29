@@ -27,6 +27,7 @@
     lsp-format = {
       enable = true;
       lspServersToEnable = [
+        "astro"
         "nixd"
         "lua_ls"
         "clangd"
