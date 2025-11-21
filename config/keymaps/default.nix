@@ -17,6 +17,11 @@
       options.noremap = true;
     }
     {
+      key = "<leader>ca";
+      action = "<cmd> lua vim.lsp.buf.code_action()<cr>";
+      options.noremap = true;
+    }
+    {
       key = "<C-h>";
       action = "b";
       options.noremap = true;
