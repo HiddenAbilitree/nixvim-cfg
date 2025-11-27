@@ -47,26 +47,26 @@
       options.noremap = true;
     }
     # unbind arrow keys
-    {
-      key = "<C-h>";
-      action = "h";
-      mode = ["i"];
-    }
-    {
-      key = "<C-j>";
-      action = "j";
-      mode = ["i"];
-    }
-    {
-      key = "<C-k>";
-      action = "k";
-      mode = ["i"];
-    }
-    {
-      key = "<C-l>";
-      action = "l";
-      mode = ["i"];
-    }
+    # {
+    #   key = "<C-h>";
+    #   action = "h";
+    #   mode = ["i"];
+    # }
+    # {
+    #   key = "<C-j>";
+    #   action = "j";
+    #   mode = ["i"];
+    # }
+    # {
+    #   key = "<C-k>";
+    #   action = "k";
+    #   mode = ["i"];
+    # }
+    # {
+    #   key = "<C-l>";
+    #   action = "l";
+    #   mode = ["i"];
+    # }
     {
       key = "<Up>";
       action = "<Nop>";

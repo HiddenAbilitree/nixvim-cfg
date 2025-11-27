@@ -47,6 +47,27 @@
       ];
     };
 
+    # avante = {
+    #   enable = true;
+    #   settings = {
+    #     auto_suggestions_provider = "copilot";
+    #     # mappings = {
+    #     #   suggestion = {
+    #     #     accept = "<C-l>";
+    #     #     next = "<C-]>";
+    #     #     prev = "<C-[>";
+    #     #     dismiss = "<C-'>";
+    #     #   };
+    #     # };
+    #   };
+    # };
+    # nui.enable = true;
+
+    copilot-lua = {
+      enable = true;
+      settings.auto_trigger = true;
+    };
+
     colorizer.enable = true;
 
     nvim-surround.enable = true;

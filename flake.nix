@@ -2,13 +2,14 @@
   description = "nixvim config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs = {
     nixvim,
+    nixpkgs,
     flake-parts,
     ...
   } @ inputs:
@@ -33,6 +34,10 @@
         };
         nvim = systemNixvim.makeNixvimWithModule nixvimModule;
       in {
+        _module.args.pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
         checks.default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
         formatter = pkgs.alejandra;
         packages.default = nvim;
