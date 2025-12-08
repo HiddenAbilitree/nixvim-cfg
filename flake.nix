@@ -26,8 +26,8 @@
         system,
         ...
       }: let
-        nixvimLib = nixvim.lib.${system};
-        systemNixvim = nixvim.legacyPackages.${system};
+        nixvimLib = nixvim.lib.${pkgs.stdenv.hostPlatform.system};
+        systemNixvim = nixvim.legacyPackages.${pkgs.stdenv.hostPlatform.system};
         nixvimModule = {
           inherit pkgs;
           module = import ./config;
