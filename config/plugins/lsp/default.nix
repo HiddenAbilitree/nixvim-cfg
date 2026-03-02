@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   plugins.lsp = {
     enable = true;
     luaConfig.post = builtins.readFile ./lsp.lua;
@@ -18,6 +18,10 @@
       };
       eslint.enable = true;
       gopls.enable = true;
+      hls = {
+        enable = true;
+        installGhc = true;
+      };
       hyprls = {
         enable = true;
         filetypes = ["conf"];
