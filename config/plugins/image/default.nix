@@ -1,6 +1,6 @@
 {
   plugins.image = {
-    enable = true;
+    enable = false;
 
     settings = {
       hijack_file_patterns = ["*.png" "*.jpg" "*.jpeg" "*.gif" "*.webp" "*.ico"];
