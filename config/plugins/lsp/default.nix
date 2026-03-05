@@ -18,10 +18,6 @@
       };
       eslint.enable = true;
       gopls.enable = true;
-      hls = {
-        enable = true;
-        installGhc = true;
-      };
       hyprls = {
         enable = true;
         filetypes = ["conf"];

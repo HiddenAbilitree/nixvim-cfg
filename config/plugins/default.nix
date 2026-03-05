@@ -70,6 +70,11 @@
 
     colorizer.enable = true;
 
+    haskell-tools = {
+      enable = true;
+      enableTelescope = true;
+    };
+
     nvim-surround.enable = true;
 
     project-nvim.enable = true;
