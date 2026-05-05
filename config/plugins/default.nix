@@ -6,7 +6,9 @@
     ./lsp
     ./mini
     ./noice
+    ./none-ls
     ./oil
+    ./roblox
     ./telescope
     ./toggleterm
     ./treesitter
