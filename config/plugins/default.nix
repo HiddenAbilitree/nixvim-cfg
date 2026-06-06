@@ -41,6 +41,7 @@
         "jdtls"
         "rust_analyzer"
         "oxlint"
+        "oxfmt"
         "cssls"
         "nushell"
         "pylsp"
