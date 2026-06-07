@@ -56,7 +56,7 @@
           typescript = ["oxfmt"];
           typescriptreact = ["oxfmt"];
         };
-        format_on_save = {
+        format_after_save = {
           timeout_ms = 2000;
           lsp_format = "never";
         };
