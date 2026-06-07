@@ -33,21 +33,34 @@
         "nixd"
         "lua_ls"
         "clangd"
-        "eslint"
         "gopls"
-        "tailwindcss"
         "tinymist"
         "hyprls"
         "jdtls"
         "rust_analyzer"
-        "oxlint"
-        "oxfmt"
         "cssls"
         "nushell"
         "pylsp"
         "pyright"
         "ruff"
       ];
+    };
+
+    conform-nvim = {
+      enable = true;
+      autoInstall.enable = true;
+      settings = {
+        formatters_by_ft = {
+          javascript = ["oxfmt"];
+          javascriptreact = ["oxfmt"];
+          typescript = ["oxfmt"];
+          typescriptreact = ["oxfmt"];
+        };
+        format_on_save = {
+          timeout_ms = 2000;
+          lsp_format = "never";
+        };
+      };
     };
 
     # avante = {

@@ -45,7 +45,6 @@
       };
       nushell.enable = true;
       oxlint.enable = true;
-      oxfmt.enable = true;
       pylsp = {
         enable = true;
         settings.plugins = {
