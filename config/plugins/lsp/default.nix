@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   plugins.lsp = {
     enable = true;
     luaConfig.post = builtins.readFile ./lsp.lua;
@@ -47,13 +47,36 @@
       oxlint.enable = true;
       pylsp = {
         enable = true;
+        rootMarkers = [
+          "pyproject.toml"
+          "uv.lock"
+          "setup.py"
+          "setup.cfg"
+          "requirements.txt"
+          "Pipfile"
+          ".git"
+        ];
         settings.plugins = {
           black.enabled = true;
           ruff.enabled = true;
           pylint.enabled = true;
         };
+        extraOptions.before_init = lib.nixvim.mkRaw "_G.__nixvim_python_lsp_before_init";
       };
-      pyright.enable = true;
+      pyright = {
+        enable = true;
+        rootMarkers = [
+          "pyrightconfig.json"
+          "pyproject.toml"
+          "uv.lock"
+          "setup.py"
+          "setup.cfg"
+          "requirements.txt"
+          "Pipfile"
+          ".git"
+        ];
+        extraOptions.before_init = lib.nixvim.mkRaw "_G.__nixvim_python_lsp_before_init";
+      };
       ruff.enable = true;
       rust_analyzer = {
         enable = true;
