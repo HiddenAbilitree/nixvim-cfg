@@ -84,20 +84,14 @@ function _G.__nixvim_python_lsp_before_init(_, config)
   end
 
   if config.name == 'pyright' then
-    config.settings = vim.tbl_deep_extend('force', config.settings or {}, {
-      python = {
-        pythonPath = python,
-      },
-    })
+    config.settings = config.settings or {}
+    config.settings.python = config.settings.python or {}
+    config.settings.python.pythonPath = python
   elseif config.name == 'pylsp' then
-    config.settings = vim.tbl_deep_extend('force', config.settings or {}, {
-      pylsp = {
-        plugins = {
-          jedi = {
-            environment = python,
-          },
-        },
-      },
-    })
+    config.settings = config.settings or {}
+    config.settings.pylsp = config.settings.pylsp or {}
+    config.settings.pylsp.plugins = config.settings.pylsp.plugins or {}
+    config.settings.pylsp.plugins.jedi = config.settings.pylsp.plugins.jedi or {}
+    config.settings.pylsp.plugins.jedi.environment = python
   end
 end
