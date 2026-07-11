@@ -1,4 +1,9 @@
-{
+{pkgs, ...}: let
+  clipboardCommand =
+    if pkgs.stdenv.hostPlatform.isDarwin
+    then "<cmd>'<,'>w !pbcopy<cr>"
+    else "<cmd>wl-copy<cr>";
+in {
   keymaps = [
     # general mappings
     {
@@ -43,7 +48,7 @@
     }
     {
       key = "'<,'>w";
-      action = "<cmd>wl-copy<cr>";
+      action = clipboardCommand;
       options.noremap = true;
     }
     # unbind arrow keys

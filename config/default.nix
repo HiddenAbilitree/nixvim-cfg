@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [
     ./plugins
     ./keymaps
@@ -9,5 +9,5 @@
   viAlias = true;
   vimAlias = true;
   globals.mapleader = " ";
-  clipboard.providers.wl-copy.enable = true;
+  clipboard.providers.wl-copy.enable = pkgs.stdenv.hostPlatform.isLinux;
 }
