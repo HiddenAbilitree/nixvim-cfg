@@ -1,12 +1,19 @@
-{pkgs, ...}: {
-  extraPackages = with pkgs; [
-    luau
-    luau-lsp
-    rojo
-    selene
-    stylua
-    wally
-  ];
+{
+  lib,
+  pkgs,
+  ...
+}: {
+  extraPackages = with pkgs;
+    [
+      luau
+      luau-lsp
+      rojo
+      selene
+      stylua
+    ]
+    ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
+      wally
+    ];
 
   plugins.luau-lsp = {
     enable = true;
