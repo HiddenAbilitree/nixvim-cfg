@@ -81,7 +81,7 @@
     # nui.enable = true;
 
     copilot-lua = {
-      enable = true;
+      enable = false;
       settings.auto_trigger = true;
     };
 
