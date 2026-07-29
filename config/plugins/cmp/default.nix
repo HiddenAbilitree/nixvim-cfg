@@ -4,10 +4,10 @@
       enable = true;
       settings = {
         sources = [
-          {name = "nvim_lsp";}
-          {name = "path";}
-          {name = "buffer";}
-          {name = "treesitter";}
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+          { name = "treesitter"; }
         ];
         mapping = {
           "<C-Space>" = "cmp.mapping.complete()";

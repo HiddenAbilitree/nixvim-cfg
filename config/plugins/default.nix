@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./cmp
     ./image
@@ -51,10 +52,10 @@
       autoInstall.enable = true;
       settings = {
         formatters_by_ft = {
-          javascript = ["oxfmt"];
-          javascriptreact = ["oxfmt"];
-          typescript = ["oxfmt"];
-          typescriptreact = ["oxfmt"];
+          javascript = [ "oxfmt" ];
+          javascriptreact = [ "oxfmt" ];
+          typescript = [ "oxfmt" ];
+          typescriptreact = [ "oxfmt" ];
         };
         format_after_save = {
           timeout_ms = 2000;

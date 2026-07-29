@@ -1,4 +1,5 @@
-{lib, ...}: {
+{ lib, ... }:
+{
   plugins.lsp = {
     enable = true;
     luaConfig.post = builtins.readFile ./lsp.lua;
@@ -20,7 +21,7 @@
       gopls.enable = true;
       hyprls = {
         enable = true;
-        filetypes = ["conf"];
+        filetypes = [ "conf" ];
       };
       jdtls.enable = true;
       jsonls = {
@@ -30,7 +31,7 @@
             {
               name = "Rojo project";
               description = "JSON schema for Rojo *.project.json files";
-              fileMatch = ["*.project.json"];
+              fileMatch = [ "*.project.json" ];
               url = "https://raw.githubusercontent.com/rojo-rbx/vscode-rojo/master/schemas/project.template.schema.json";
             }
           ];
@@ -41,7 +42,7 @@
       lua_ls.enable = true;
       nixd = {
         enable = true;
-        settings.formatting.command = ["alejandra"];
+        settings.formatting.command = [ "nixfmt" ];
       };
       nushell.enable = true;
       oxlint.enable = true;

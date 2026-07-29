@@ -1,1 +1,1 @@
-{plugins.noice.enable = false;}
+{ plugins.noice.enable = false; }
