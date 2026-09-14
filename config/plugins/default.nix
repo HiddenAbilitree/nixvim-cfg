@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./cloak
     ./cmp
     ./image
     ./lazygit
