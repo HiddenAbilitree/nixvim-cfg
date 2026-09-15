@@ -1,21 +1,70 @@
 name: Update flake inputs
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
 
+permissions:
+  contents: write
+
+concurrency:
+  group: update-flake-lock-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   update:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      id-token: write
-      issues: write
-      pull-requests: write
+    runs-on: selfhosted
+    env:
+      NIX_CONFIG: |
+        access-tokens = github.com=${{ github.token }}
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout
+        uses: actions/checkout@v5
         with:
-          persist-credentials: false
-      - uses: DeterminateSystems/determinate-nix-action@v3
-      - uses: DeterminateSystems/update-flake-lock@main
+          ref: main
+
+      - name: Update flake lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          nix flake update
+
+      - name: Build updated nixvim configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          system="$(nix eval --impure --raw --expr builtins.currentSystem)"
+          nix build \
+            ".#packages.$system.default" \
+            ".#checks.$system.default" \
+            --out-link "$RUNNER_TEMP/flake-build" \
+            --json --print-build-logs > "$RUNNER_TEMP/flake-build.json"
+
+      - name: Push built closures to Attic
+        shell: bash
+        run: |
+          set -euo pipefail
+          output_paths="$(jq -er '.[] | .outputs[]' "$RUNNER_TEMP/flake-build.json")"
+          test -n "$output_paths"
+          mapfile -t paths <<< "$output_paths"
+          attic-ci-push "${paths[@]}"
+
+      - name: Commit and push flake lock
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain -- flake.lock)" ]; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- flake.lock
+          git commit -m "chore: update flake.lock" -- flake.lock
+          git push
