@@ -95,7 +95,12 @@
 
     nvim-surround.enable = true;
 
-    project-nvim.enable = true;
+    project-nvim = {
+      enable = true;
+      luaConfig.pre = ''
+        vim.fn.mkdir(vim.fn.stdpath("data"), "p")
+      '';
+    };
 
     # rustaceanvim.enable = true;
 
