@@ -46,24 +46,6 @@
       };
       nushell.enable = true;
       oxlint.enable = true;
-      pylsp = {
-        enable = true;
-        rootMarkers = [
-          "pyproject.toml"
-          "uv.lock"
-          "setup.py"
-          "setup.cfg"
-          "requirements.txt"
-          "Pipfile"
-          ".git"
-        ];
-        settings.plugins = {
-          black.enabled = true;
-          ruff.enabled = true;
-          pylint.enabled = true;
-        };
-        extraOptions.before_init = lib.nixvim.mkRaw "_G.__nixvim_python_lsp_before_init";
-      };
       pyright = {
         enable = true;
         rootMarkers = [
@@ -76,9 +58,17 @@
           "Pipfile"
           ".git"
         ];
+        settings.pyright.disableOrganizeImports = true;
         extraOptions.before_init = lib.nixvim.mkRaw "_G.__nixvim_python_lsp_before_init";
       };
-      ruff.enable = true;
+      ruff = {
+        enable = true;
+        extraOptions.init_options.settings = {
+          fixAll = true;
+          organizeImports = true;
+          logLevel = "warn";
+        };
+      };
       rust_analyzer = {
         enable = true;
         settings.check.command = "clippy";

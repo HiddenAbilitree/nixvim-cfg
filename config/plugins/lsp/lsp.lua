@@ -87,14 +87,19 @@ function _G.__nixvim_python_lsp_before_init(_, config)
     config.settings = config.settings or {}
     config.settings.python = config.settings.python or {}
     config.settings.python.pythonPath = python
-  elseif config.name == 'pylsp' then
-    config.settings = config.settings or {}
-    config.settings.pylsp = config.settings.pylsp or {}
-    config.settings.pylsp.plugins = config.settings.pylsp.plugins or {}
-    config.settings.pylsp.plugins.jedi = config.settings.pylsp.plugins.jedi or {}
-    config.settings.pylsp.plugins.jedi.environment = python
   end
 end
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('nixvim_python_lsp', { clear = true }),
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client and client.name == 'ruff' then
+      client.server_capabilities.hoverProvider = false
+    end
+  end,
+  desc = 'Prefer Pyright hover documentation for Python buffers',
+})
 
 local tailwind_canonical_diagnostic_code = 'suggestCanonicalClasses'
 

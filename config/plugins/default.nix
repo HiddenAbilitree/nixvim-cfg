@@ -42,9 +42,6 @@
         "rust_analyzer"
         "cssls"
         "nushell"
-        "pylsp"
-        "pyright"
-        "ruff"
       ];
     };
 
@@ -55,10 +52,15 @@
         formatters_by_ft = {
           javascript = [ "oxfmt" ];
           javascriptreact = [ "oxfmt" ];
+          python = [
+            "ruff_fix"
+            "ruff_format"
+            "ruff_organize_imports"
+          ];
           typescript = [ "oxfmt" ];
           typescriptreact = [ "oxfmt" ];
         };
-        format_after_save = {
+        format_on_save = {
           timeout_ms = 2000;
           lsp_format = "never";
         };

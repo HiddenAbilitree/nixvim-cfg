@@ -27,6 +27,11 @@ in {
       options.noremap = true;
     }
     {
+      key = "<leader>cf";
+      action = "<cmd>lua require('conform').format({ async = true, lsp_format = 'never' })<cr>";
+      options.noremap = true;
+    }
+    {
       key = "<C-h>";
       action = "b";
       options.noremap = true;
