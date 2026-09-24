@@ -99,6 +99,9 @@
 
     project-nvim = {
       enable = true;
+      package = pkgs.vimPlugins.project-nvim.overrideAttrs (old: {
+        patches = (old.patches or [ ]) ++ [ ./project-nvim-empty-history.patch ];
+      });
       luaConfig.pre = ''
         vim.fn.mkdir(vim.fn.stdpath("data"), "p")
       '';
