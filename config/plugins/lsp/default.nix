@@ -69,6 +69,7 @@
           logLevel = "warn";
         };
       };
+      rumdl.enable = true;
       rust_analyzer = {
         enable = true;
         settings.check.command = "clippy";

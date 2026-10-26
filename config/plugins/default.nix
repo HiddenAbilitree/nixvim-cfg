@@ -52,6 +52,7 @@
         formatters_by_ft = {
           javascript = [ "oxfmt" ];
           javascriptreact = [ "oxfmt" ];
+          markdown = [ "rumdl" ];
           python = [
             "ruff_fix"
             "ruff_format"
@@ -60,6 +61,10 @@
           typescript = [ "oxfmt" ];
           typescriptreact = [ "oxfmt" ];
         };
+        formatters.rumdl.prepend_args = [
+          "--config"
+          "MD013.reflow = true"
+        ];
         format_on_save = {
           timeout_ms = 2000;
           lsp_format = "never";
