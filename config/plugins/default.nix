@@ -42,6 +42,7 @@
         "rust_analyzer"
         "cssls"
         "nushell"
+        "svelte"
       ];
     };
 

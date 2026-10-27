@@ -76,6 +76,7 @@
         installRustc = false;
         installCargo = false;
       };
+      svelte.enable = true;
       tailwindcss.enable = true;
       taplo.enable = true;
       tinymist.enable = true;
